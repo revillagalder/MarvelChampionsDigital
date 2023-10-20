@@ -14,5 +14,5 @@ $ pip install pandas sqlalchemy openpyxl pymysql
 - Con SoapUI hacemos un GET de las cartas y exportamos el resultado a un fichero cards.JSON
 - Lanzamos python MarvelcdbJSONtoDataFrame.py para generar los datos a importar a la BBDD
 ```bash
-$ paython MarvelcdbJSONtoDataFrame.py
+$ python MarvelcdbJSONtoDataFrame.py
 ```
