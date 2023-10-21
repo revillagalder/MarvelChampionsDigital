@@ -1,4 +1,4 @@
-package model;
+package com.mcd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -153,6 +153,7 @@ public class Carta implements Serializable {
 	@Lob
 	private String name;
 
+	@Id
 	@Lob
 	@Column(name="octgn_id")
 	private String octgnId;
