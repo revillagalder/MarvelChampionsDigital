@@ -1,18 +1,17 @@
 # MarvelcdbJSONtoDataFrame
-Script en Python para alimentar la BBDD MySQL a partir de los datos obtenidos de la API de marvelcdb.com
-Como los datos vienen en formato JSON y queremos almacenarlos en una BBDD relacional convertimos los datos a DataFrame y los cargamos en MySQL.
+Script para obtener las cartas de la API de marvelcdb.com (/api/public/cards) y guardarlas en base de datos MySQL
+Como los datos vienen en formato JSON el script obtiene los datos de la API, los transforma a DataFrame y los carga en la BBDD marvelchampionsdigital de MySQL 
 
 ## Requisitos
-- Instalar pyton y pip
-- Instalar librerias necesarias
+- Mysql, Pyton y Pip
+- Schema marvelchampionsdigital creado en localhost MySQL
+- Librerias necesarias: requests, json, pandas, sqlalchemy, openpyxl y pymysql
 ```bash
-$ pip install pandas sqlalchemy openpyxl pymysql
+$ pip install requests json pandas sqlalchemy openpyxl pymysql
 ```
 
-## Importar cartas JSON a BBDD
-- Obtenemos el json de todas las cartas haciendo uso de la api de marvelcdb (/api/public/cards)
-- Con SoapUI hacemos un GET de las cartas y exportamos el resultado a un fichero cards.JSON
-- Lanzamos python MarvelcdbJSONtoDataFrame.py para generar los datos a importar a la BBDD
+## Ejecutar
+- Lanzamos script MarvelcdbJSONtoDataFrame.py
 ```bash
 $ python MarvelcdbJSONtoDataFrame.py
 ```

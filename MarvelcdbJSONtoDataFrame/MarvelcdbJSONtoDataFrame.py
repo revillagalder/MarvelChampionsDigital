@@ -1,21 +1,39 @@
+import requests
+import json
 import pandas as pd
 from sqlalchemy import create_engine
 
-# Convertir el array de JSON en un DataFrame
-df = pd.read_json('cards.json')
+# Hacer una solicitud a la API
+url = 'https://marvelcdb.com/api/public/cards/' 
+response = requests.get(url)
 
-# Convertir todas las columnas a tipo de dato str
-df = df.astype(str)
+# Verificar si la solicitud fue exitosa (código de estado 200)
+if response.status_code == 200:
+    # Convertir la respuesta a JSON
+    datos_json = response.json()
 
-# Imprimir el DataFrame por consola
-print(df)
-print(df.columns)
+    # Guardar los datos en un archivo JSON
+    with open('cards.json', 'w') as archivo_json:
+        json.dump(datos_json, archivo_json)
 
-# Guardar el DataFrame en un fichero Excel
-#df.to_excel('cards.xlsx', sheet_name='Cartas Marvel Champions', index=False)
+    print("Los datos han sido guardados correctamente en 'cards.json'.")
 
-# Conectar a la base de datos MySQL
-engine = create_engine('mysql+pymysql://root:mysql@localhost/marvelchampionsdigital')
+    # Convertir el array de JSON en un DataFrame
+    df = pd.DataFrame(datos_json)
 
-# Almacenar el DataFrame en una tabla llamada 'cartas'
-df.to_sql('cartas', con=engine, if_exists='replace', index=False)
+    # Convertir todas las columnas a tipo de dato str
+    df = df.astype(str)
+
+    # Guardar el DataFrame en un fichero Excel
+    # df.to_excel('cards.xlsx', sheet_name='Cartas Marvel Champions', index=False)
+
+    # Conectar a la base de datos MySQL
+    engine = create_engine('mysql+pymysql://root:mysql@localhost/marvelchampionsdigital')
+
+    # Almacenar el DataFrame en una tabla llamada 'cartas'
+    df.to_sql('cartas', con=engine, if_exists='replace', index=False)
+
+    print("Datos almacenados correctamente en MySQL marvelchampionsdigital.cards.")
+
+else:
+    print(f"No se pudo completar la solicitud. Código de estado: {response.status_code}")
