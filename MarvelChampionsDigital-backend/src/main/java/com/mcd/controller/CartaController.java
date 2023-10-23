@@ -21,4 +21,9 @@ public class CartaController {
     public List<Carta> getAllCartas() {
         return cartaService.getAllCartas();
     }
+    
+    @GetMapping("holaMundo")
+    public String holaMundo() {
+    	return "Hola Mundo";
+    }
 }
