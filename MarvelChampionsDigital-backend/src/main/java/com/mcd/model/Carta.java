@@ -64,6 +64,7 @@ public class Carta implements Serializable {
 	@Column(name="card_set_type_name_code")
 	private String cardSetTypeNameCode;
 
+	@Id
 	@Lob
 	private String code;
 
@@ -158,7 +159,6 @@ public class Carta implements Serializable {
 	@Lob
 	private String name;
 
-	@Id
 	@Lob
 	@Column(name="octgn_id")
 	private String octgnId;

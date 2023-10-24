@@ -17,4 +17,22 @@ public class CartaService {
     public List<Carta> getAllCartas() {
         return cartaRepository.findAll();
     }
+    
+    public List<Carta> getCartaByCode(String code) {
+    	return cartaRepository.findByCode(code);
+    }
+    
+    public List<Carta> getCartasByPackCode(String pack_code) {
+    	return cartaRepository.findByPackCode(pack_code);
+    }
+    
+    public List<Carta> getCartasByTypeCode(String type_code) {
+    	return cartaRepository.findByTypeCode(type_code);
+    }
+    public List<Carta> getCartasByFactionCode(String faction_code) {
+    	return cartaRepository.findByFactionCode(faction_code);
+    }
+    public List<Carta> getCartasByCardSetTypeCode(String card_set_type_name_code) {
+		return cartaRepository.findByCardSetTypeNameCode(card_set_type_name_code);
+    }
 }

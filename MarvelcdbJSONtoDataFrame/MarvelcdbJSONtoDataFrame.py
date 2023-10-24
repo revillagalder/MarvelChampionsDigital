@@ -4,7 +4,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # Hacer una solicitud a la API
-url = 'https://marvelcdb.com/api/public/cards/' 
+url = 'https://marvelcdb.com/api/public/cards/core' 
 response = requests.get(url)
 
 # Verificar si la solicitud fue exitosa (código de estado 200)
@@ -13,10 +13,10 @@ if response.status_code == 200:
     datos_json = response.json()
 
     # Guardar los datos en un archivo JSON
-    with open('cards.json', 'w') as archivo_json:
+    with open('cards_core.json', 'w') as archivo_json:
         json.dump(datos_json, archivo_json)
 
-    print("Los datos han sido guardados correctamente en 'cards.json'.")
+    print("Los datos de core han sido guardados correctamente en 'cards_core.json'.")
 
     # Convertir el array de JSON en un DataFrame
     df = pd.DataFrame(datos_json)
