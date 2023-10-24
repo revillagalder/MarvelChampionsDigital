@@ -1,0 +1,23 @@
+<div class="nueva-partida-container">
+    <h2>NUEVA PARTIDA</h2>
+  
+    <label for="heroes">ELIGE TU HEROE</label>
+    <select id="heroes">
+      <option *ngFor="let heroe of heroes" [value]="heroe.card_set_code">{{heroe.name}}</option>
+      <!-- Aquí deberías llenar las opciones con tus héroes disponibles -->
+    </select>
+  
+    <label for="villanos">ELIGE EL VILLANO</label>
+    <select id="villanos">
+      <option *ngFor="let villano of villanos" [value]="villano.card_set_code">{{villano.name}}</option>
+    </select>
+  
+    <label for="conjuntos">ELIGE LOS CONJUNTOS DE ENCUENTROS</label>
+    <select id="conjuntos" multiple>
+      <option *ngFor="let encuentro of encuentros_modulares" [value]="encuentro.card_set_code">{{encuentro.name}}</option>
+    </select>
+  
+    <button routerLink="/partida">JUGAR</button>
+    <button routerLink="/">VOLVER</button>
+  </div>
+  

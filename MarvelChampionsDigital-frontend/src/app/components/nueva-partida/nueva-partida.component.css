@@ -1,0 +1,42 @@
+.nueva-partida-container {
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nueva-partida-container h2 {
+    font-size: 66px;
+    margin-bottom: 20px;
+  }
+  
+  .nueva-partida-container label {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .nueva-partida-container select {
+    font-size: 18px;
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .nueva-partida-container button {
+    font-size: 46px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Marvel-Regular', sans-serif;
+  }
+  
+  .nueva-partida-container button:hover {
+    background-color: #d70000;
+  }
+  

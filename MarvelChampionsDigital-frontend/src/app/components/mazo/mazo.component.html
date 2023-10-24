@@ -1,0 +1,24 @@
+<h1>VILLANO</h1>
+<div class="row custom-row" style="display: flex; flex-direction: row;">
+    <div class="col-3" *ngFor="let carta of cartasVillano" [ngStyle]="{marginBottom: '15px'}">
+        <div class="card horizontal-card">
+            <img src="https://marvelcdb.com/{{carta.imagesrc}}" class="card-img-top horizontal-img" alt="...">
+        </div>
+    </div>
+</div>
+<h2>PLAN PRINCIPAL</h2>
+<div class="row custom-row" style="display: flex; flex-direction: row;">
+    <div class="col-3" *ngFor="let carta of cartasPlanPrincipal" [ngStyle]="{marginBottom: '15px'}">
+        <div class="card horizontal-card">
+            <img src="https://marvelcdb.com/{{carta.imagesrc}}" class="card-img-top horizontal-img" alt="...">
+        </div>
+    </div>
+</div>
+<h2>MAZO CONJUNTO ENCUENTROS</h2>
+<div class="row custom-row" style="display: flex; flex-direction: row;">
+    <div class="col-3" *ngFor="let carta of mazoConjuntoEncuentros" [ngStyle]="{marginBottom: '15px'}">
+        <div class="card horizontal-card">
+            <img src="https://marvelcdb.com/{{carta.imagesrc}}" class="card-img-top horizontal-img" alt="...">
+        </div>
+    </div>
+</div>

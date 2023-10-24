@@ -1,0 +1,28 @@
+.menu-container {
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-container h2 {
+    font-size: 66px;
+  }
+  
+  .menu-container button {
+    margin-bottom: 10px;
+    font-size: 46px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Marvel-Regular', sans-serif;
+  }
+  
+  .menu-container button:hover {
+    background-color: #d70000;
+  }
+  

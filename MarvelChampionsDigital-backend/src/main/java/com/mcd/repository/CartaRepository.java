@@ -18,5 +18,13 @@ public interface CartaRepository extends JpaRepository<Carta, Long> {
 
 	List<Carta> findByFactionCode(String faction_code);
 
+	List<Carta> findByCardSetCode(String card_set_code);
+	
 	List<Carta> findByCardSetTypeNameCode(String card_set_type_name_code);
+	
+	List<Carta> findByCardSetCodeAndTypeCode(String card_set_code, String type_code);
+
+    List<Carta> findByCardSetCodeInAndTypeCodeIn(List<String> card_set_code, List<String> type_code);
+
+
 }

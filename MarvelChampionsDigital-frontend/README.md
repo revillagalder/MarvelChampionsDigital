@@ -2,17 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
-## Development server
+## Angular Material
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Instalación: `ng add @angular/material`
+Creación de material.module.ts para la externalización del los modulos de material: `ng g m material --flat` y añadir import al modulo en app.module.ts
+Para añadir componentes: añadir import y export en material.module.ts 
 
-## Code scaffolding
+## Arrancar en Desarrollo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Lanzar `ng serve` para servidor de desarrollo. Navegar en `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Generar componente
+
+Lanzar `ng generate component component-name` to generar un nuevo componente. 
+
+## Generar resto de elementos
+
+Lanzar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Lanzar `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 

@@ -3,6 +3,7 @@ package com.mcd.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +39,7 @@ public class CartaController {
 		return cartaService.getCartasByPackCode(pack_code);
 	}
 
+	@CrossOrigin(origins = "http://localhost:4200") // Permitir solicitudes desde http://localhost:4200
 	@GetMapping("/obtenerCartasPorTypeCode/{type_code}")
 	public List<Carta> getCartasByTypeCode(@PathVariable String type_code) {
 		return cartaService.getCartasByTypeCode(type_code);
@@ -48,8 +50,31 @@ public class CartaController {
 		return cartaService.getCartasByFactionCode(faction_code);
 	}
 
-	@GetMapping("/obtenerCartasPorCardSetTypeCode/{card_set_type_name_code}")
-	public List<Carta> getCartasByCardSetTypeCode(@PathVariable String card_set_type_name_code) {
-		return cartaService.getCartasByCardSetTypeCode(card_set_type_name_code);
+	@CrossOrigin(origins = "http://localhost:4200") // Permitir solicitudes desde http://localhost:4200
+	@GetMapping("/obtenerCartasPorCardSetCode/{card_set_code}")
+	public List<Carta> getCartasByCardSetCode(@PathVariable String card_set_code) {
+		return cartaService.getCartasByCardSetCode(card_set_code);
 	}
+
+	@CrossOrigin(origins = "http://localhost:4200") // Permitir solicitudes desde http://localhost:4200
+	@GetMapping("/obtenerCartasPorCardSetTypeNameCode/{card_set_type_name_code}")
+	public List<Carta> getCartasByCardSetTypeNameCode(@PathVariable String card_set_type_name_code) {
+		return cartaService.getCartasByCardSetTypeNameCode(card_set_type_name_code);
+	}
+
+	@CrossOrigin(origins = "http://localhost:4200") // Permitir solicitudes desde http://localhost:4200
+	@GetMapping("/obtenerCartasPorCardSetCodeYTypeCode/{card_set_code}/{type_code}")
+	public List<Carta> getCartasByCardSetCodeAndTypeCode(@PathVariable String card_set_code,
+			@PathVariable String type_code) {
+		return cartaService.getCartasByCardSetCodeAndTypeCode(card_set_code, type_code);
+	}
+	
+	@CrossOrigin(origins = "http://localhost:4200") // Permitir solicitudes desde http://localhost:4200
+	@GetMapping("/obtenerCartasPorCardSetCodesYTypeCodes/{card_set_code}/{type_code}")
+	public List<Carta> getCartasByCardSetCodesAndTypeCode(@PathVariable List<String> card_set_code,
+	        @PathVariable List<String> type_code) {
+	    return cartaService.getCartasByCardSetCodesAndTypeCode(card_set_code, type_code);
+	}
+
+
 }

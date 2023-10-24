@@ -1,0 +1,7 @@
+.horizontal-img {
+    display: inline-block;
+    max-width: 100%; /* Esto asegura que la imagen no se extienda más allá de su contenedor */
+}
+.custom-row {
+    flex-wrap: wrap;
+}
