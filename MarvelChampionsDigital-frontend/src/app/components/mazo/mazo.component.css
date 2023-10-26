@@ -1,7 +1,15 @@
-.horizontal-img {
-    display: inline-block;
-    max-width: 100%; /* Esto asegura que la imagen no se extienda más allá de su contenedor */
+button {
+    margin: 10px;
+    font-size: 32px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Marvel-Regular', sans-serif;
 }
-.custom-row {
-    flex-wrap: wrap;
+
+button:hover {
+    background-color: #d70000;
 }

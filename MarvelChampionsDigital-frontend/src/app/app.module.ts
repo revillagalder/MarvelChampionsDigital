@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NuevaPartidaComponent } from './components/nueva-partida/nueva-partida.component';
 import { PartidaComponent } from './components/partida/partida.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PartidaComponent } from './components/partida/partida.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

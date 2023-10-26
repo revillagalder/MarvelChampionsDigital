@@ -15,10 +15,41 @@
     </div>
 </div>
 <h2>MAZO CONJUNTO ENCUENTROS</h2>
+<button (click)="barajarMazoConjuntoEncuentros()" [disabled]="mazoConjuntoEncuentros.length == 0">BARAJAR</button>
+<button (click)="robarCartaConjuntoEncuentros(1)" [disabled]="mazoConjuntoEncuentros.length == 0">ROBAR</button>
+<button (click)="mezclarDescarteMazoConjuntoEncuentros()" [disabled]="areaEncuentros.length == 0">MEZCLAR
+    DESCARTE</button>
+<button (click)="verMazoEncuentros()" [disabled]="mazoConjuntoEncuentros.length == 0">VER MAZO ENCUENTROS</button>
+
 <div class="row custom-row" style="display: flex; flex-direction: row;">
+    <div class="col-3" [ngStyle]="{marginBottom: '15px'}">
+        <div class="card horizontal-card" >
+            <img src="../../../assets/cards/marvel-encounter-back.png" class="card-img-top back-card-img mazoConjuntoEncuentros" alt="...">
+        </div>
+    </div>
+    <div class="col-3" *ngFor="let carta of areaEncuentros" [ngStyle]="{marginBottom: '15px'}">
+        <div class="card horizontal-card" >
+            <img src="https://marvelcdb.com/{{carta.imagesrc}}" class="card-img-top horizontal-img" alt="...">
+        </div>
+    </div>
+</div>
+<!--<div class="row custom-row" style="display: flex; flex-direction: row;">
     <div class="col-3" *ngFor="let carta of mazoConjuntoEncuentros" [ngStyle]="{marginBottom: '15px'}">
         <div class="card horizontal-card">
             <img src="https://marvelcdb.com/{{carta.imagesrc}}" class="card-img-top horizontal-img" alt="...">
         </div>
     </div>
-</div>
+</div>-->
+
+<!--<div class="row custom-row" style="display: flex; flex-direction: row;">
+    <div class="col-3" [ngStyle]="{marginBottom: '15px'}">
+        <div class="card horizontal-card" >
+            <img src="../../../assets/cards/marvel-encounter-back.png" class="card-img-top back-card-img mazoConjuntoEncuentros" alt="...">
+        </div>
+    </div>
+    <div class="col-3" *ngFor="let carta of areaEncuentros" [ngStyle]="{marginBottom: '15px'}">
+        <div class="card horizontal-card" >
+            <img src="https://marvelcdb.com/{{carta.imagesrc}}" class="card-img-top horizontal-img" alt="...">
+        </div>
+    </div>
+</div>-->

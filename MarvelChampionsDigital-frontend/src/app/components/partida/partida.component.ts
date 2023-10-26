@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MazoComponent } from '../mazo/mazo.component';
 
 @Component({
   selector: 'app-partida',
