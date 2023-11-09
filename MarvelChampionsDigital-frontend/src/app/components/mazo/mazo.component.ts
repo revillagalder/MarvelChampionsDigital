@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MazoService } from 'src/app/services/mazo.service';
-import {  animate, style, AnimationBuilder } from '@angular/animations';
+import { animate, style, AnimationBuilder } from '@angular/animations';
 
 @Component({
   selector: 'app-mazo',
@@ -70,7 +70,7 @@ export class MazoComponent implements OnInit {
     this.areaEncuentros = [];
   }
 
-  public verMazoEncuentros(){
+  public verMazoEncuentros() {
     console.log("TODO");
   }
 

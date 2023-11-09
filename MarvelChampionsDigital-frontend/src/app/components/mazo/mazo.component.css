@@ -13,3 +13,7 @@ button {
 button:hover {
     background-color: #d70000;
 }
+
+button:disabled {
+    background-color: #5e5c5c;
+}
